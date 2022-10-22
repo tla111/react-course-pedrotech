@@ -5,19 +5,17 @@ const App = () => {
 
   return (
     <div className="App">
-      <UserOne />
-      <UserOne />
-      <UserOne />
+      <UserOne name="Pedro" age={21} email="PedroTech@gmail.com" />
     </div>
   )
 }
 
-const UserOne = () => {
+const UserOne = (props) => {
   return (
     <div>
-      <h1>Pedro</h1>
-      <h1>21</h1>
-      <h1>PedroTech@gmail.com</h1>
+      <h1>{props.name}</h1>
+      <h1>{props.age}</h1>
+      <h1>{props.email}</h1>
     </div>
   )
 }
