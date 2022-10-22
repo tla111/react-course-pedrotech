@@ -5,12 +5,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <UserOne name="Pedro" age={21} email="PedroTech@gmail.com" />
+      <User name="Pedro" age={21} email="PedroTech@gmail.com" />
+      <User name="Tim" age={29} email="TimLa@gmail.com" />
     </div>
   )
 }
 
-const UserOne = (props) => {
+const User = (props) => {
   return (
     <div>
       <h1>{props.name}</h1>
