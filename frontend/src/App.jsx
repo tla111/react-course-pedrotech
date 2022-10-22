@@ -2,15 +2,23 @@ import React from 'react'
 import './App.css'
 
 const App = () => {
-  const name = "Tim"
-  const greeting = <h1>{`Hello ${name}`}</h1>
+
   return (
     <div className="App">
-      {greeting}
-      {greeting}
-      {greeting}
+      <UserOne />
     </div>
   )
 }
+
+const UserOne = () => {
+  return (
+    <div>
+      <h1>Pedro</h1>
+      <h1>21</h1>
+      <h1>PedroTech@gmail.com</h1>
+    </div>
+  )
+}
+
 
 export default App
