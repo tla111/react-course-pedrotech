@@ -6,9 +6,9 @@ import { User } from './Components/User'
 const App3 = () => {
     // const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin", "Luke"]
     const users = [
-        { name: "Pedro", age: 21 },
-        { name: "Jake", age: 25 },
-        { name: "Jessica", age: 45 },
+        { name: "Pedro", age: 21, status: true },
+        { name: "Jake", age: 25, status: false },
+        { name: "Jessica", age: 45, status: true },
     ]
 
 
@@ -16,7 +16,7 @@ const App3 = () => {
         <div className="App">
             {users.map((user, key) => {
                 return (
-                    <User name={user.name} age={user.age} key={key} />
+                    user.status && <User name={user.name} age={user.age} key={key} />
                 )
             })}
         </div>
