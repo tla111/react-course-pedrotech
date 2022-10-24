@@ -4,8 +4,14 @@ import './App.css'
 
 const App3 = () => {
     const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin"]
+
+
     return (
-        <div>{names[1]}</div>
+        <div className="App">
+            {names.map((name, key) => {
+                return <h1 key={key}>{name}</h1>
+            })}
+        </div>
     )
 }
 
