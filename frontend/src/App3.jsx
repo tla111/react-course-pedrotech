@@ -3,8 +3,9 @@ import './App.css'
 
 
 const App3 = () => {
+    const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin"]
     return (
-        <div>App3</div>
+        <div>{names[1]}</div>
     )
 }
 
