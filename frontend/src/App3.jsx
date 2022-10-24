@@ -15,14 +15,18 @@ const App3 = () => {
         <div className="App">
             {users.map((user, key) => {
                 return (
-                    <div key={key} style={{ display: "flex" }}>
-                        <h1>{user.name}</h1>
-                        <h1 style={{ marginLeft: "5px" }}>{user.age}</h1>
-                    </div>
+                    <User name={user.name} age={user.age} key={key} />
                 )
             })}
         </div>
     )
 }
+
+const User = (props) => (
+    <div key={props.key} style={{ display: "flex" }}>
+        <h1>{props.name}</h1>
+        <h1 style={{ marginLeft: "5px" }}>{props.age}</h1>
+    </div>
+)
 
 export default App3
