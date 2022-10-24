@@ -3,7 +3,7 @@ import './App.css'
 
 
 const App3 = () => {
-    const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin"]
+    const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin", "Luke"]
 
 
     return (
