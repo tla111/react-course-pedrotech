@@ -6,9 +6,9 @@ const App4 = () => {
 
     return (
         <div className="App">
-            <button>Increase</button>
-            <button>Decrease</button>
-            <button>Set to Zero</button>
+            <button onClick={() => { setCount(count + 1) }}>Increase</button>
+            <button onClick={() => { setCount(count - 1) }}>Decrease</button>
+            <button onClick={() => { }}>Set to Zero</button>
             {count}
         </div>
     )
