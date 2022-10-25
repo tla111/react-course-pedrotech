@@ -5,7 +5,7 @@ const App4 = () => {
     const [inputValue, setInputValue] = useState("");
 
     const handleInputChange = (event) => {
-        console.log(event.target.value);
+        setInputValue(event.target.value);
     }
 
     return (
