@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
 const App4 = () => {
-    let age = 0;
+    const [age, setAge] = useState(0);
 
     const increaseAge = () => {
-        age = age + 1;
-        console.log(age);
+        setAge(age + 1)
     }
+
     return (
         <div className="App">
             {age}
