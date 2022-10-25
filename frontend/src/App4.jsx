@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import './App.css'
 
 const App4 = () => {
-    const [textColor, setTextColor] = useState("red")
+    const [count, setCount] = useState(0)
 
     return (
         <div className="App">
-            <button onClick={() => setTextColor(textColor === "black" ? "red" : "black")}>Show/Hide</button>
-            <h1 style={{ color: textColor }}>HI MY NAME IS PEDRO</h1>
+            <button>Increase</button>
+            <button>Decrease</button>
+            <button>Set to Zero</button>
+            {count}
         </div>
     )
 }
