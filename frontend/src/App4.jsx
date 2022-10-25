@@ -2,11 +2,16 @@ import React from 'react'
 import './App.css'
 
 const App4 = () => {
-    const age = 0;
+    let age = 0;
+
+    const increaseAge = () => {
+        age = age + 1;
+        console.log(age);
+    }
     return (
         <div className="App">
             {age}
-            <button>Increase Age</button>
+            <button onClick={increaseAge}>Increase Age</button>
         </div>
     )
 }
