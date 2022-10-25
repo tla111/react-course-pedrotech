@@ -6,7 +6,7 @@ const App4 = () => {
 
     return (
         <div className="App">
-            <button>Show/Hide</button>
+            <button onClick={() => setShowText(!showText)}>Show/Hide</button>
             {showText && <h1>HI MY NAME IS PEDRO</h1>}
         </div>
     )
