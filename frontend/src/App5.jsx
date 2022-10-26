@@ -33,6 +33,16 @@ const App5 = () => {
         }))
     }
 
+    const changeTask = (id) => {
+        setTodoList(todoList.map((task) => {
+            if (task.id === id) {
+                return { ...task, taskName: newTask };
+            } else {
+                return task;
+            }
+        }))
+    }
+
     return (
         <div className="App">
             <div className="addTask">
@@ -41,18 +51,19 @@ const App5 = () => {
             </div>
             <div className="list">
                 {todoList.map((task) => (
-                    <Task key={task.id} taskName={task.taskName} id={task.id} completed={task.completed} deleteTask={deleteTask} completeTask={completeTask} />
+                    <Task key={task.id} taskName={task.taskName} id={task.id} completed={task.completed} deleteTask={deleteTask} completeTask={completeTask} changeTask={changeTask} />
                 ))}
             </div>
         </div>
     )
 }
 
-const Task = ({ taskName, id, deleteTask, completeTask, completed }) => {
+const Task = ({ taskName, id, completed, deleteTask, completeTask, changeTask }) => {
     return (
         <div>
             <h1 style={{ backgroundColor: completed ? "dodgerblue" : "" }}>{taskName}</h1>
             <button onClick={() => completeTask(id)}>Complete</button>
+            <button onClick={() => changeTask(id)}>Change Task</button>
             <button onClick={() => deleteTask(id)}>X</button>
         </div>
     )
