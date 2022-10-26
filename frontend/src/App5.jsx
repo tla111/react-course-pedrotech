@@ -30,12 +30,18 @@ const App5 = () => {
             </div>
             <div className="list">
                 {todoList.map((task) => (
-                    <div>
-                        <h1>{task.taskName}</h1>
-                        <button onClick={() => deleteTask(task.id)}>X</button>
-                    </div>
+                    <Task taskName={task.taskName} id={task.id} deleteTask={deleteTask} />
                 ))}
             </div>
+        </div>
+    )
+}
+
+const Task = (props) => {
+    return (
+        <div>
+            <h1>{props.taskName}</h1>
+            <button onClick={() => props.deleteTask(props.id)}>X</button>
         </div>
     )
 }
