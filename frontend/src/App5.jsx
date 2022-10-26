@@ -24,7 +24,13 @@ const App5 = () => {
     }
 
     const completeTask = (id) => {
-        console.log(id);
+        setTodoList(todoList.map((task) => {
+            if (task.id === id) {
+                return { ...task, completed: true };
+            } else {
+                return task;
+            }
+        }))
     }
 
     return (
@@ -35,17 +41,17 @@ const App5 = () => {
             </div>
             <div className="list">
                 {todoList.map((task) => (
-                    <Task key={task.id} taskName={task.taskName} id={task.id} deleteTask={deleteTask} completeTask={completeTask} />
+                    <Task key={task.id} taskName={task.taskName} id={task.id} completed={task.completed} deleteTask={deleteTask} completeTask={completeTask} />
                 ))}
             </div>
         </div>
     )
 }
 
-const Task = ({ taskName, id, deleteTask, completeTask }) => {
+const Task = ({ taskName, id, deleteTask, completeTask, completed }) => {
     return (
         <div>
-            <h1>{taskName}</h1>
+            <h1 style={{ backgroundColor: completed ? "dodgerblue" : "" }}>{taskName}</h1>
             <button onClick={() => completeTask(id)}>Complete</button>
             <button onClick={() => deleteTask(id)}>X</button>
         </div>
