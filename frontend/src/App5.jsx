@@ -4,7 +4,14 @@ import './App.css'
 
 const App5 = () => {
     return (
-        <div className="App">App5</div>
+        <div className="App">
+            <div className="addTask">
+
+            </div>
+            <div className="list">
+
+            </div>
+        </div>
     )
 }
 
