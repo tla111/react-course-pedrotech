@@ -4,6 +4,7 @@ import './App.css'
 
 const App5 = () => {
     const [todoList, setTodoList] = useState([])
+    const [newTask, setNewTask] = useState("")
 
     return (
         <div className="App">
