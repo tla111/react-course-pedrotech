@@ -11,8 +11,7 @@ const App5 = () => {
     }
 
     const addTask = () => {
-        const newTodoList = [...todoList, newTask]
-        setTodoList(newTodoList)
+        setTodoList([...todoList, newTask])
     }
 
     console.log(todoList);
@@ -24,7 +23,9 @@ const App5 = () => {
                 <button onClick={addTask}>Add Task</button>
             </div>
             <div className="list">
-
+                {todoList.map((task) => (
+                    <h1>{task}</h1>
+                ))}
             </div>
         </div>
     )
