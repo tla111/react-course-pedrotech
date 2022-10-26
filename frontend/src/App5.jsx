@@ -10,12 +10,18 @@ const App5 = () => {
         setNewTask(e.target.value)
     }
 
+    const addTask = () => {
+        const newTodoList = [...todoList, newTask]
+        setTodoList(newTodoList)
+    }
+
+    console.log(todoList);
+
     return (
         <div className="App">
             <div className="addTask">
                 <input onChange={handleChange} />
-                <button>Add Task</button>
-                {newTask}
+                <button onClick={addTask}>Add Task</button>
             </div>
             <div className="list">
 
