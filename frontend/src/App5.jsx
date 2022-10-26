@@ -13,13 +13,18 @@ const App5 = () => {
     const addTask = () => {
         const task = {
             id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
-            taskName: newTask
+            taskName: newTask,
+            completed: false
         }
         setTodoList([...todoList, task])
     }
 
     const deleteTask = (id) => {
         setTodoList(todoList.filter((task) => task.id !== id))
+    }
+
+    const completeTask = (id) => {
+        console.log(id);
     }
 
     return (
@@ -30,17 +35,18 @@ const App5 = () => {
             </div>
             <div className="list">
                 {todoList.map((task) => (
-                    <Task taskName={task.taskName} id={task.id} deleteTask={deleteTask} />
+                    <Task key={task.id} taskName={task.taskName} id={task.id} deleteTask={deleteTask} completeTask={completeTask} />
                 ))}
             </div>
         </div>
     )
 }
 
-const Task = ({ taskName, id, deleteTask }) => {
+const Task = ({ taskName, id, deleteTask, completeTask }) => {
     return (
         <div>
             <h1>{taskName}</h1>
+            <button onClick={() => completeTask(id)}>Complete</button>
             <button onClick={() => deleteTask(id)}>X</button>
         </div>
     )
