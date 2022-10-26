@@ -37,11 +37,11 @@ const App5 = () => {
     )
 }
 
-const Task = (props) => {
+const Task = ({ taskName, id, deleteTask }) => {
     return (
         <div>
-            <h1>{props.taskName}</h1>
-            <button onClick={() => props.deleteTask(props.id)}>X</button>
+            <h1>{taskName}</h1>
+            <button onClick={() => deleteTask(id)}>X</button>
         </div>
     )
 }
