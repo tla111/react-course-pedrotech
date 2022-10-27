@@ -1,9 +1,22 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 const App6 = () => {
+    const [text, setText] = useState("")
+
+    useEffect(() => {
+
+    }, [])
+
     return (
-        <div className="App">App6</div>
+        <div className="App">
+            <input
+                onChange={(e) => {
+                    setText(e.target.value)
+                }}
+            />
+            <h1>{text}</h1>
+        </div>
     )
 }
 
