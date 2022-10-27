@@ -5,7 +5,7 @@ const App6 = () => {
     const [text, setText] = useState("")
 
     useEffect(() => {
-
+        console.log("State Changed");
     }, [])
 
     return (
