@@ -21,10 +21,17 @@ const App7 = () => {
         <div className="App">
             <input placeholder="Ex. Pedro..." onChange={(e) => setName(e.target.value)} />
             <button onClick={fetchData}>Predict Age</button>
+            <Person name={predictedAge?.name} age={predictedAge?.age} count={predictedAge?.count} />
+        </div>
+    )
+}
 
-            <h1>Name: {predictedAge?.name}</h1>
-            <h1>Predicted Age: {predictedAge?.age}</h1>
-            <h1>Count: {predictedAge?.count}</h1>
+const Person = ({ name, age, count }) => {
+    return (
+        <div>
+            <h1>Name: {name} </h1>
+            <h1>Predicted Age: {age}</h1>
+            <h1>Count: {count}</h1>
         </div>
     )
 }
