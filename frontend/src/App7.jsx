@@ -3,23 +3,18 @@ import './App.css'
 import Axios from 'axios'
 
 const App7 = () => {
-    const [catFact, setCatFact] = useState("")
-
-    const fetchCatFact = () => {
-        Axios.get("https://catfact.ninja/fact").then((res) => {
-            setCatFact(res.data.fact);
-        })
-    }
 
     useEffect(() => {
-        fetchCatFact()
+
     }, [])
 
 
     return (
         <div className="App">
-            <button onClick={fetchCatFact}>Generate Cat Fact</button>
-            <p>{catFact}</p>
+            <input placeholder="Ex. Pedro..." />
+            <button>Predict Age</button>
+
+            <h1>Predicted Age:</h1>
         </div>
     )
 }
