@@ -5,6 +5,7 @@ import Axios from 'axios'
 const App7 = () => {
     const [name, setName] = useState("")
     const [predictedAge, setPredictedAge] = useState(null)
+
     const fetchData = () => {
         Axios(`https://api.agify.io/?name=${name}`).then((res) => {
             setPredictedAge(res.data)
