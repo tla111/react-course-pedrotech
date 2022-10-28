@@ -3,6 +3,12 @@ import './App.css'
 import Axios from 'axios'
 
 const App7 = () => {
+    const [name, setName] = useState("")
+    const fetchData = () => {
+        Axios(`https://api.agify.io/?name=${name}`).then((res) => {
+            console.log(res.data);
+        })
+    }
 
     useEffect(() => {
 
@@ -11,8 +17,8 @@ const App7 = () => {
 
     return (
         <div className="App">
-            <input placeholder="Ex. Pedro..." />
-            <button>Predict Age</button>
+            <input placeholder="Ex. Pedro..." onChange={(e) => setName(e.target.value)} />
+            <button onClick={fetchData}>Predict Age</button>
 
             <h1>Predicted Age:</h1>
         </div>
