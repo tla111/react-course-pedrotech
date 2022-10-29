@@ -8,6 +8,7 @@ import Contact from './Pages/Contact'
 const App8 = () => {
     return (
         <div className="App">
+            <div>Navbar</div>
             <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
