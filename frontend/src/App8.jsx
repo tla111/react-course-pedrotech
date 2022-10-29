@@ -4,7 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const App8 = () => {
     return (
-        <div className="App">App8</div>
+        <div className="App">
+            <Router>
+                <Routes>
+                    {/* <Route path="/" element={ } /> */}
+                </Routes>
+            </Router>
+        </div>
     )
 }
 
