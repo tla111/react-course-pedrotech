@@ -8,10 +8,10 @@ import Contact from './Pages/Contact'
 export const AppContext = createContext()
 
 const App9 = () => {
-    const [username, setUsername] = useState("Pedro")
+    const [username, setUsername] = useState("Tim")
     return (
         <div className="App">
-            <AppContext.Provider>
+            <AppContext.Provider value={{ username, setUsername }}>
                 <Router>
                     <div>
                         <Link to="/">Home</Link>
@@ -19,8 +19,8 @@ const App9 = () => {
                         <Link to="/contact">Contact</Link>
                     </div>
                     <Routes>
-                        <Route path="/" element={<Home username={username} />} />
-                        <Route path="/profile" element={<Profile username={username} setUsername={setUsername} />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/profile" element={<Profile />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
                     </Routes>

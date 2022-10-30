@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { AppContext } from '../App9'
 
-const ChangeProfile = ({ setUsername }) => {
+const ChangeProfile = () => {
     const [newUsername, setNewUsername] = useState("")
+    const { setUsername } = useContext(AppContext)
     return (
         <div>
             <input onChange={(e) => setNewUsername(e.target.value)} />
