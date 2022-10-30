@@ -4,11 +4,11 @@ import { AppContext } from '../App9'
 
 
 const Profile = () => {
-    const { username, setUsername } = useContext(AppContext)
+    const { username } = useContext(AppContext)
     return (
         <div>
             <h1>Profile, user is: {username} </h1>
-            <ChangeProfile setUsername={setUsername} />
+            <ChangeProfile />
         </div>
     )
 }
