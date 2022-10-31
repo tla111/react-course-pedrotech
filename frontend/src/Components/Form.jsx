@@ -2,7 +2,14 @@ import React from 'react'
 
 const Form = () => {
     return (
-        <div>Form</div>
+        <form style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "50%" }}>
+            <input type="text" placeholder="Full Name..." />
+            <input type="text" placeholder="Email..." />
+            <input type="text" placeholder="Age..." />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password..." />
+            <input type="submit" />
+        </form>
     )
 }
 
