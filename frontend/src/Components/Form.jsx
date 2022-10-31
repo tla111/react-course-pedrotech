@@ -10,7 +10,7 @@ const Form = () => {
         email: yup.string().email().required(),
         age: yup.number().positive().integer().min(18).required(),
         password: yup.string().min(4).max(20).required(),
-        confirmPassword: yup.string().oneOf([yup.ref("password"), null]),
+        confirmPassword: yup.string().oneOf([yup.ref("password"), null], "Password Don't Match"),
     })
 
     const { register, handleSubmit, formState: { errors } } = useForm({
