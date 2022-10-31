@@ -17,7 +17,7 @@ import { useQuery } from '@tanstack/react-query'
 import Axios from "axios"
 
 const Home = () => {
-    const { data, isLoading, isError } = useQuery(["cat"], () => {
+    const { data, isLoading, isError, refetch } = useQuery(["cat"], () => {
         return Axios.get("https://catfact.ninja/fact").then((res) => res.data)
     })
 
@@ -33,6 +33,7 @@ const Home = () => {
         <div>
             <h1>THIS IS THE HOMEPAGE</h1>
             <p>{data?.fact}</p>
+            <button onClick={refetch}>Update Data</button>
         </div>
     )
 }
