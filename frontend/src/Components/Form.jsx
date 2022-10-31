@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
 const Form = () => {
@@ -13,7 +14,7 @@ const Form = () => {
     })
 
     const { register, handleSubmit } = useForm({
-        // resolver:
+        resolver: yupResolver(schema)
     })
 
     const onSubmit = (data) => {
