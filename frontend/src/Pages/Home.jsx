@@ -29,6 +29,8 @@ const Home = () => {
         return <h1>Loading...</h1>
     }
 
+    console.log(catData);
+
     return (
         <div>
             <h1>THIS IS THE HOMEPAGE</h1>
