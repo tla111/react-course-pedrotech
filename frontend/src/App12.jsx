@@ -4,9 +4,10 @@ import './App.css'
 
 const App12 = () => {
     const [isVisible, setIsVisible] = useState(false)
+
     return (
         <div className="App">
-            <button>
+            <button onClick={() => setIsVisible((prev) => !prev)}>
                 {isVisible ? "Hide" : "Show"}
             </button>
             {isVisible && <h1>Hidden Text</h1>}
